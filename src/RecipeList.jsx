@@ -1,5 +1,8 @@
 import React from "react";
+// import { Link } from 'react-router-dom';
 import './App.css'
+
+
 
 
 const RecipeList = ({onRecipeClick}) => {
@@ -53,7 +56,9 @@ const RecipeList = ({onRecipeClick}) => {
             <h2>Indulge in our Italian Cuisines</h2>
             <div className="grid-container">
                 {recipes.map((recipe) =>(
+                    // onClick={()=>onRecipeClick(recipe.id)}
                    <div key={recipe.id} className="grid-item" onClick={()=>onRecipeClick(recipe.id)} >
+                    
                    <img src={recipe.image} alt={recipe.name} className="grid-item" />
                    <div className="overlay">
                    <div className="text">{recipe.description}</div>
@@ -61,12 +66,13 @@ const RecipeList = ({onRecipeClick}) => {
                    <h3 className="grid-item2" >{recipe.name}</h3>
                    <span className="grid-item2"> ⏱ : {recipe.time} 
                    <br></br>🍴 : {recipe.serves}</span>
+                  
                    {/* <p className="grid-item" >{recipe.description}</p> */}
-
                    </div>
                 )
                 )}
             </div>
+           {/* <Link to={'./RecipeDetail'}></Link>; */}
         </div>
     );
 };
