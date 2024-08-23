@@ -93,7 +93,7 @@ const recipes = [
     ],
   },
   {
-    image: "./src/images/tiramisu",
+    image: "/src/images/tiramisu",
     name: "Tiramisu",
     ingredients: [
       "Egg yolks",
@@ -115,7 +115,7 @@ const recipes = [
     ],
   },
   {
-    image: "./src/images/sfogliatella.jpg",
+    image: "/src/images/sfogliatella.jpg",
     name: "Sfogliatella",
     ingredients: [
       "480g Bread flour",
