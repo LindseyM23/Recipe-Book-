@@ -2,8 +2,8 @@ import React from "react";
 
 const recipes = [
   {
-    image: "./src/images/spaghetti-carbonara.jpg",
     name: "Spaghetti Carbonara",
+    image: "/spaghetti-carbonara.jpg",
     ingredients: [
       "200g spaghetti",
       "2 teaspoons olive oil",
@@ -26,8 +26,8 @@ const recipes = [
     ],
   },
   {
-    image: "./src/images/chicken-alfredo-pasta.jpg",
     name: "Chicken Alfredo",
+    image: "/chicken-alfredo-pasta.jpg",
     ingredients: [
       "200g fettuccine",
       "2 chicken breasts",
@@ -49,8 +49,8 @@ const recipes = [
     ],
   },
   {
-    image: "./src/images/penne-arrabiata.jpg",
     name: "Penne Arrabiata",
+    image: "/penne-arrabiata.jpg",
     ingredients: [
       "1 teaspoon olive oil",
       "1 cup chopped onion",
@@ -74,14 +74,14 @@ const recipes = [
     ],
   },
   {
-    image: "./src/images/cannoli.jpg",
+    image: "/cannoli.jpg",
     name: "Cannoli",
     ingredients: [
       "8 cannolli shells, homemade or store bought will work",
       "2 cups ricotta cheese",
       "1 cup confectioner's sugar, plus extra for dusting",
       "3/4 cup mini chocolate chips, divided",
-      "1 and 1/2 teaspoons pure vanilla extract",   
+      "1 and 1/2 teaspoons pure vanilla extract",
     ],
     instructions: [
       "Make the cannolli dough. Cover with storage wrap and chilli for atleast an hour.",
@@ -93,8 +93,8 @@ const recipes = [
     ],
   },
   {
-    image: "/src/images/tiramisu",
     name: "Tiramisu",
+    image: "/tiramisu.jpg",
     ingredients: [
       "Egg yolks",
       "Sugar",
@@ -115,8 +115,8 @@ const recipes = [
     ],
   },
   {
-    image: "/src/images/sfogliatella.jpg",
     name: "Sfogliatella",
+    image: "/sfogliatela.jpg",
     ingredients: [
       "480g Bread flour",
       "4g Salt",
@@ -130,7 +130,7 @@ const recipes = [
       "50g Egg yolk",
       "100g Chopped candied orange peel",
       "150g Softened or melted butter(for layering)",
-      "20g Powdered sugar(for dusting)", 
+      "20g Powdered sugar(for dusting)",
     ],
     instructions: [
       "In a large bowl combine the bread flour, salt, water, and runny honey. Combine to a shaggy dough and turn out unto a clean surface. Kneed dough until it comes together in to a rough ball, flatten into a square, wrap and chill for 30 minutes. ",
@@ -138,7 +138,7 @@ const recipes = [
       "Using liberal amounts of flour, feed the sfogliatella dough through the pasta machine, decreasing the thickness until a couple clicks off the finest settings.",
       "Wrap around a rolling pin using something (two bowls or a holder of some kind) to allow free rotation.",
       "With your softened or melted butter to hand, start unraveling your sfogliatta dough from the rolling pin. Before adding any butter, start a roll at the end, then smear and cover the section from the roll end to the rolling pin with butter.",
-      "Stretch the dough as wide and as thin as it can go. Working one section at a at a time, rolling it tightly into a log, butter, stretch, roll, until you have a large roll of papery thin dough coated with throughout.", 
+      "Stretch the dough as wide and as thin as it can go. Working one section at a at a time, rolling it tightly into a log, butter, stretch, roll, until you have a large roll of papery thin dough coated with throughout.",
       "Cover the log with butter, wrap and chill for 1-2 hours.",
       "While chilling, make your semolina ricotta filling. Take a large sauce pan and add whole milk, sugar, salt, cinnamon, and vannilla extract. Bring to a boil.",
       "Reduce heat to asimmer, and slowly add the semolina while stirring the whole time. Continue to stir until pulling away from the sides and thickened. Remove from the heat.",
@@ -149,8 +149,8 @@ const recipes = [
       "Smear butter over the top of each cut dough round, and using the palm of your hand flatten slightly. Using your fingers in a pinching motion, shape each into a cone shape, pipe in a bit of filling and seal the ends.",
       "Repeat until all the sfogliatella are filled and sealed. Bake on the middle rack of the ovenfor 30 minutes or until golden brown.",
       "Remove from the oven and place individually on a cooling rack. Dust with powdered sugar and enjoy!",
-    ]
-  }
+    ],
+  },
 ];
 
 
@@ -161,6 +161,7 @@ const RecipeDetails = () => {
       {recipes.map((recipe, ig) => (
         <div key={ig}>
           <h2>{recipe.name}</h2>
+          <img src={recipe.image} alt={recipe.name} style={{width: '500px' , height: '200px', display: 'block', margin: '0 auto' }}/>
           <h3>Ingredients:</h3>
           <ul>
             {recipe.ingredients.map((ingredient, idx) => (
@@ -175,7 +176,7 @@ const RecipeDetails = () => {
           </ol>
         </div>
       ))}
-      <button>GO BACK</button>
+      <button style={{display: 'block', margin: '0 auto'}}>GO BACK</button>
     </div>
   );
 };
