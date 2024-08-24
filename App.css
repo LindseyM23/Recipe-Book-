@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+/* Cinzel */
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+/*Parisienne  */
+
+
+.App {
+  text-align: center;
+  background-color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 50px;
+  box-sizing: border-box;
+  margin: 40px;
+  padding: 40px;
+  background-color: #ECF0F3;
+  border-radius: 30px;
+
+}
+
+.grid-item {
+  position: relative;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden; 
+  width: 100%;
+  margin-top: 0px;
+  max-width: 350px;
+  box-shadow: 10px 10px 20px 10px grey;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  border-radius: 20px; 
+  box-shadow: none;
+}
+
+.grid-item:hover img {
+  opacity: 0.3; 
+  transform: scale(1.3); 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:   rgba(0, 0, 0, 0.5) ; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.grid-item:hover .overlay {
+  opacity: 1; 
+}
+
+.text {
+  color: white;
+  font-family: Cinzel;
+  font-size: 14px; 
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.grid-item-title {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.grid-item-info {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.grid-container p {
+  color: black;
+  font-family: Cinzel, serif;
+  padding: 30px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.App h1 {
+  font-family: Cinzel, sans-serif;
+  background-color: #ffb563;
+  margin-top: 0;
+  color: white;
+  padding-bottom: 60px;
+  font-size: 80px;
+  font-weight: lighter;
+}
+
+.App h1 img {
+  padding-top: 30px;
+}
+
+h2 {
+  font-family: Parisienne;
+  font-size: 30px;
+  color: #a41623;
+  font-weight: lighter;
+  position: relative;
+  bottom: 130px;
+  left: 40px;
+}
+
+.footer{
+  background-color: #ffb563;
+  margin: 0px;
+  padding: 20px;
+}
+.footer img{
+  width: 50px;
+}
+ h3{
+  font-family: Cinzel, sans-serif;
+  font-weight: lighter;
+  color: black;
+}
+.grid-item2{
+  font-family: Cinzel, sans-serif;
+  font-weight: lighter;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+
+@media (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  
+  }
+}
+.recipe-detail ul{
+  text-align: left;
+  list-style-type:circle;
+  font-family: Parisienne ;
+  font-size: 20px;
+}
+.recipe-detail h3 .ingredients{
+  text-align: left;
+}
+
+.recipe-detail img{
+  width: 400px;
+}
+.recipe-detail ol{
+  text-align: left;
+  font-family: Cinzel, sans-serif ;
+  
+}
+.recipe-detail h3 .detail-heading{
+  font-size: 300px;
+}
+
+button{
+  padding: 10px 90px 10px 90px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-family: Cinzel,sans-serif;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  
+}
+
+button:hover{
+  border: 1px solid gray;
+  background-color: white;
+  transition: .1s ease-in-out;
+}
+.recipe-detail h1{
+  font-size: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0px;
+  background-color: #A41623;
+  color: white;
+}
+.recipe-detail h3{
+  color: black;
+  font-size: 40px;
+  text-align: left;
+  padding-left: 30px;
+}
