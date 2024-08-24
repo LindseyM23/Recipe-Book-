@@ -188,6 +188,7 @@ button:hover{
 .recipe-detail h1{
   font-size: 60px;
   padding-top: 30px;
+   margin-top: -140px;
   padding-bottom: 30px;
   margin: 0px;
   background-color: #A41623;
